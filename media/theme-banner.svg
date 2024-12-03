@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#13141f" />
+      <stop offset="100%" style="stop-color:#1a1b26" />
+    </linearGradient>
+    
+    <!-- Star glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  
+  <!-- Nebula effect -->
+  <g opacity="0.3">
+    <path d="M0 160 Q320 120 640 160 T1280 160" fill="none" stroke="#7aa2f7" stroke-width="80" opacity="0.2"/>
+    <path d="M0 180 Q320 140 640 180 T1280 180" fill="none" stroke="#9d7cd8" stroke-width="60" opacity="0.2"/>
+  </g>
+
+  <!-- Stars -->
+  <g filter="url(#glow)">
+    <circle cx="200" cy="100" r="1" fill="#ffffff"/>
+    <circle cx="400" cy="150" r="1.5" fill="#ffffff"/>
+    <circle cx="600" cy="80" r="1" fill="#ffffff"/>
+    <circle cx="800" cy="120" r="2" fill="#ffffff"/>
+    <circle cx="1000" cy="90" r="1" fill="#ffffff"/>
+    <circle cx="1200" cy="140" r="1.5" fill="#ffffff"/>
+  </g>
+
+  <!-- Title -->
+  <text x="640" y="180" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="64" font-weight="bold">
+    Cosmic Horizon
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="640" y="220" text-anchor="middle" fill="#7aa2f7" font-family="Arial" font-size="24">
+    VS Code Theme
+  </text>
+</svg>

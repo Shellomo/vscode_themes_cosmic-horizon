@@ -1,0 +1,59 @@
+{
+  "name": "cosmic-horizon-the",
+  "displayName": "Cosmic Horizon",
+  "description": "A sophisticated dark theme with space-inspired colors for Visual Studio Code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Cosmic Horizon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cosmic-horizon.json"
+      }
+    ]
+  },
+  "publisher": "Shellomo",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shellomo/vscode_themes_cosmic-horizon"
+  },
+  "keywords": [
+    "theme",
+    "dark theme",
+    "modern",
+    "sophisticated",
+    "space",
+    "colors",
+    "Unique",
+    "Custom"
+  ],
+  "galleryBanner": {
+    "color": "#1a1b26",
+    "theme": "dark"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^16.x.x",
+    "typescript": "^4.x.x"
+  },
+  "dependencies": {
+    "@vscode/extension-telemetry": "^0.9.8"
+  }
+}
